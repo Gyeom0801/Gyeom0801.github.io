@@ -14,8 +14,8 @@
     <style>
         body {
             font-family: 'Inter', 'Nanum Gothic', sans-serif;
-            /* PDF의 배경색과 유사한 부드러운 핑크빛 크림색 */
-            background-color: #FFFBF9; 
+            /* 요청하신 대로 더 짙은 분홍색 배경으로 변경 */
+            background-color: #FEEFF2; 
             color: #333333;
         }
         .slide-image {
@@ -23,30 +23,45 @@
             height: auto;
             border-radius: 0.5rem; /* 8px */
             box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-            border: 1px solid #F8E8E8;
-            /* 16:9 비율 유지를 위한 aspect-ratio (Tailwind 클래스로도 가능) */
+            /* 테마에 맞춰 테두리 색상 변경 */
+            border: 1px solid #FDE8E8; 
             aspect-ratio: 16 / 9;
             object-fit: contain; /* 이미지가 잘리지 않고 프레임 안에 모두 보이도록 수정 */
-            background-color: #fdf8f6; /* 이미지 배경색 */
+            background-color: #ffffff; 
         }
+        /* 텍스트 설명 카드 스타일 */
+        .description-card {
+            margin-top: 1.5rem; /* 24px */
+            padding: 1.5rem; /* 24px */
+            background-color: #ffffff;
+            border-radius: 0.5rem; /* 8px */
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            /* 테마에 맞춰 테두리 색상 변경 */
+            border: 1px solid #FDE8E8;
+        }
+        /* * 반응형 텍스트를 위해 h2, p 스타일은 HTML 태그에 
+         * Tailwind 클래스로 직접 적용합니다. 
+         */
     </style>
 </head>
 <body class="antialiased">
 
     <!-- 1. Header Navigation -->
-    <header class="container mx-auto px-6 py-6 text-center">
-        <h1 class="text-4xl font-black tracking-wider">MOIRAI Inc.</h1>
-        <p class="text-xl text-gray-600 mt-2">프레젠테이션</p>
+    <header class="container mx-auto px-4 sm:px-6 py-6 text-center">
+        <!-- H1 스타일: clamp()로 반응형 폰트 크기, 진분홍색 적용 -->
+        <h1 class="font-black tracking-wider" style="font-size: clamp(2.5rem, 5vw, 4.5rem); color: #D11D53; line-height: 1.2;">
+            MOIRAI Inc.
+        </h1>
     </header>
 
-    <main class="container mx-auto px-6 max-w-5xl py-8">
+    <!-- 모바일을 위해 px-4, 데스크탑을 위해 sm:px-6 적용 -->
+    <main class="container mx-auto px-4 sm:px-6 max-w-5xl py-8">
         
         <!-- 슬라이드 이미지 섹션 -->
         <div class="space-y-12">
 
             <!-- 슬라이드 1 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 1 / 8</span> -->
                 <img src="./images/1.jpg" 
                      alt="슬라이드 1: 표지 - MOIRAI" 
                      class="slide-image"
@@ -55,7 +70,6 @@
 
             <!-- 슬라이드 2 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 2 / 8</span> -->
                 <img src="./images/2.jpg" 
                      alt="슬라이드 2: 키워드" 
                      class="slide-image"
@@ -64,7 +78,6 @@
 
             <!-- 슬라이드 3 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 3 / 8</span> -->
                 <img src="./images/3.jpg" 
                      alt="슬라이드 3: 메인 비주얼" 
                      class="slide-image"
@@ -73,7 +86,6 @@
 
             <!-- 슬라이드 4 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 4 / 8</span> -->
                 <img src="./images/4.jpg" 
                      alt="슬라이드 4: 아트 스타일" 
                      class="slide-image"
@@ -82,7 +94,6 @@
 
             <!-- 슬라이드 5 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 5 / 8</span> -->
                 <img src="./images/5.jpg" 
                      alt="슬라이드 5: 캐릭터 소개" 
                      class="slide-image"
@@ -91,43 +102,77 @@
 
             <!-- 슬라이드 6 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 6 / 8</span> -->
                 <img src="./images/6.jpg" 
                      alt="슬라이드 6: 클로토" 
                      class="slide-image"
                      onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+                <!-- 클로토 설명 -->
+                <div class="description-card">
+                    <!-- 반응형 폰트 크기 적용 -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-gray-800">1. 클로토 (CEO)</h2>
+                    <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-700">
+                        '모이라이 Inc.'의 CEO인 클로토. 모든 실을 처음부터 만드는 여신. 흰색의 정돈된 수트와 차가운 시선은 그녀의 철저한 완벽주의를 상징한다. 클로토는 언제나 침착하고 논리적이며, 결과와 질서를 우선시하는 캐릭터로, 이러한 클로토의 성격으로 항상 좋은 결과물을 만들 수 있게 도움을 주는 회사의 지지대 역할을 하는 캐릭터 이다.
+                    </p>
+                </div>
             </div>
 
             <!-- 슬라이드 7 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 7 / 8</span> -->
                 <img src="./images/7.jpg" 
                      alt="슬라이드 7: 라케시스" 
                      class="slide-image"
                      onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+                <!-- 라케시스 설명 -->
+                <div class="description-card">
+                    <!-- 반응형 폰트 크기 적용 -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-gray-800">2. 라케시스 (중매사)</h2>
+                    <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-700">
+                        중매사인 라케시스는 귀여운 외모와 소심한 성격을 가졌지만, 신중함을 항상 가지고 있는 캐릭터로 실을 연결시키는 여신으로, 타인의 감정을 섬세하게 읽어내어 서로를 연결시켜주는 관겨의 실을 다룬다. 사람들 사이의 연결이 '운명'이 되기를 진심으로 바라며 노란빛의 머리카락은 그녀의 따스함과 조용히 빛나는 내면의 에너지를 닮은 듯한 느낌을 준다.
+                    </p>
+                </div>
             </div>
 
             <!-- 슬라이드 8 -->
             <div>
-                <!-- <span class="text-sm font-semibold text-gray-500">Slide 8 / 8</span> -->
                 <img src="./images/8.jpg" 
                      alt="슬라이드 8: 아트로포스" 
                      class="slide-image"
                      onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+                <!-- 아트로포스 설명 -->
+                <div class="description-card">
+                    <!-- 반응형 폰트 크기 적용 -->
+                    <h2 class="text-xl md:text-2xl font-extrabold text-gray-800">3. 아트로포스 (이혼 전문 변호사)</h2>
+                    <p class="mt-3 text-base md:text-lg leading-relaxed text-gray-700">
+                        이혼 전문 변호사인 아트로포스는 실을 끊어내는 여신. 까칠하고 무덤덤하지만 언제나 날카로운 판단력을 지니고있어서 잘못 엮인 인연의 매듭을 단호하게 끊는다. 감정에 휘둘리는 일을 싫어하고, 불필요한 관계에 깊이 얽히지 않는다. 업무 시간 외에도 차가운 회색빛 사무실을 벗어나지 않으며, 타인의 감정에 깊이 관여하지 않으려고 한다.
+                    </p>
+                </div>
             </div>
 
-            <!-- 슬라이드 10 (이제 9번째 슬라이드) -->
-            <!-- This block has been removed -->
+            <!-- 신규 슬라이드 9 -->
+            <div>
+                <img src="./images/9.jpg" 
+                     alt="완성작 1" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 신규 슬라이드 10 -->
+            <div>
+                <img src="./images/10.jpg" 
+                     alt="완성작 2" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
 
         </div>
     </main>
 
     <!-- 6. Footer -->
-    <footer class="text-center py-10 mt-12 border-t-2 border-F8E8E8">
+    <!-- 테두리 색상 표준 Tailwind 클래스(gray-200)로 수정 -->
+    <footer class="text-center py-10 mt-12 border-t border-gray-200">
         <p class="text-sm text-gray-500">© 2025 MOIRAI Inc. All rights reserved.</p>
     </footer>
 
 </body>
 </html>
-
 
