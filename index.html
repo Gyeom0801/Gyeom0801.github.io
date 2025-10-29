@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOIRAI Inc. 프레젠테이션</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter) 로드 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', 'Nanum Gothic', sans-serif;
+            /* PDF의 배경색과 유사한 부드러운 핑크빛 크림색 */
+            background-color: #FFFBF9; 
+            color: #333333;
+        }
+        .slide-image {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem; /* 8px */
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border: 1px solid #F8E8E8;
+            /* 16:9 비율 유지를 위한 aspect-ratio (Tailwind 클래스로도 가능) */
+            aspect-ratio: 16 / 9;
+            object-fit: contain; /* 이미지가 잘리지 않고 프레임 안에 모두 보이도록 수정 */
+            background-color: #fdf8f6; /* 이미지 배경색 */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. Header Navigation -->
+    <header class="container mx-auto px-6 py-6 text-center">
+        <h1 class="text-4xl font-black tracking-wider">MOIRAI Inc.</h1>
+        <p class="text-xl text-gray-600 mt-2">프레젠테이션</p>
+    </header>
+
+    <main class="container mx-auto px-6 max-w-5xl py-8">
+        
+        <!-- 슬라이드 이미지 섹션 -->
+        <div class="space-y-12">
+
+            <!-- 슬라이드 1 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 1 / 8</span> -->
+                <img src="./images/1" 
+                     alt="슬라이드 1: 표지 - MOIRAI" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 2 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 2 / 8</span> -->
+                <img src="./images/2" 
+                     alt="슬라이드 2: 키워드" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 3 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 3 / 8</span> -->
+                <img src="./images/3" 
+                     alt="슬라이드 3: 메인 비주얼" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 4 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 4 / 8</span> -->
+                <img src="./images/4" 
+                     alt="슬라이드 4: 아트 스타일" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 5 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 5 / 8</span> -->
+                <img src="./images/5" 
+                     alt="슬라이드 5: 캐릭터 소개" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 6 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 6 / 8</span> -->
+                <img src="./images/6" 
+                     alt="슬라이드 6: 클로토" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 7 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 7 / 8</span> -->
+                <img src="./images/7" 
+                     alt="슬라이드 7: 라케시스" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 8 -->
+            <div>
+                <!-- <span class="text-sm font-semibold text-gray-500">Slide 8 / 8</span> -->
+                <img src="./images/8" 
+                     alt="슬라이드 8: 아트로포스" 
+                     class="slide-image"
+                     onerror="this.src='https://placehold.co/1280x720/F8E8E8/333333?text=Image+Load+Failed'">
+            </div>
+
+            <!-- 슬라이드 10 (이제 9번째 슬라이드) -->
+            <!-- This block has been removed -->
+
+        </div>
+    </main>
+
+    <!-- 6. Footer -->
+    <footer class="text-center py-10 mt-12 border-t-2 border-F8E8E8">
+        <p class="text-sm text-gray-500">© 2025 MOIRAI Inc. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
